@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 进化论 · 独立情报站</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="update_dashboard.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+        body { font-family: 'Space Grotesk', sans-serif; background-color: #f6f3ee; color: #0f172a; scroll-behavior: smooth; }
+        h1, h2, h3, .serif { font-family: 'Fraunces', serif; }
+        .post-card { border-bottom: 1px solid #e7e1d9; padding: 24px 0; transition: background 0.2s; }
+        @media (min-width: 768px) { .post-card { padding: 32px 0; } }
+        .post-card:hover { background-color: #fff7ed; }
+        .badge-deep { background: #ffedd5; color: #c2410c; font-size: 0.65rem; font-weight: 800; padding: 2px 8px; border-radius: 999px; text-transform: uppercase; border: 1px solid #fed7aa; }
+        .badge-brief { background: #ecfdf3; color: #15803d; font-size: 0.65rem; font-weight: 800; padding: 2px 8px; border-radius: 999px; text-transform: uppercase; border: 1px solid #bbf7d0; }
+        .badge-verdict { background: #fef3c7; color: #b45309; font-size: 0.65rem; font-weight: 800; padding: 2px 8px; border-radius: 999px; text-transform: uppercase; border: 1px solid #fde68a; }
+        .glass-card { background: rgba(255, 255, 255, 0.72); backdrop-filter: blur(16px); }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 py-8 sm:py-10">
+        <nav class="flex flex-wrap items-center justify-between gap-4 mb-12">
+            <div class="text-2xl font-semibold serif tracking-tight">AI 进化论</div>
+            <div class="flex flex-wrap items-center gap-4 text-xs font-semibold tracking-widest uppercase text-stone-500">
+                <a href="#latest" class="hover:text-stone-900">今日雷达</a>
+                <a href="#verdicts" class="hover:text-stone-900">终局研判</a>
+                <a href="#podcast" class="hover:text-stone-900">播客</a>
+                <a href="#archives" class="hover:text-stone-900">归档</a>
+                <a href="#personal-blog" class="hover:text-stone-900">博客</a>
+            </div>
+            <button class="rounded-full bg-stone-900 text-stone-50 px-5 py-2 text-xs font-semibold shadow hover:bg-stone-700 transition">订阅</button>
+        </nav>
+
+        <header class="mb-16">
+            <div class="relative overflow-hidden rounded-[32px] border border-stone-200 glass-card shadow-xl">
+                <div class="absolute -right-20 -top-28 h-64 w-64 rounded-full bg-amber-200/60 blur-3xl"></div>
+                <div class="absolute -left-24 -bottom-32 h-72 w-72 rounded-full bg-emerald-200/40 blur-3xl"></div>
+                <div class="relative px-8 py-12 md:px-12 md:py-16">
+                    <p class="text-xs font-semibold tracking-[0.4em] uppercase text-stone-500 mb-4">Ninjin Intelligence Lab</p>
+                    <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold serif mb-6">今日雷达 · AI 情报与生存研判</h1>
+                    <p class="text-lg text-stone-600 max-w-2xl">每天早上 9 点更新，5-8 条情报 + 1-2 条深度解读。让资讯进入大脑，也进入产品。</p>
+                    <div class="flex flex-wrap items-center gap-3 mt-8">
+                        <button class="rounded-full bg-stone-900 text-stone-50 px-6 py-2 text-xs font-semibold tracking-widest uppercase">今日更新</button>
+                        <button class="rounded-full border border-stone-300 px-6 py-2 text-xs font-semibold tracking-widest uppercase text-stone-600 hover:border-stone-500">查看归档</button>
+                    </div>
+                    <p class="text-sm text-stone-400 mt-8">2026年1月25日 · Ninjin 数字化实验室</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="latest" class="mb-20">
+                <h2 class="text-[11px] font-semibold text-stone-400 uppercase tracking-[0.35em] mb-8 flex items-center">
+                    <span class="w-12 h-px bg-stone-300 mr-4"></span> Trending Now
+                </h2>
+                <article class="post-card group cursor-pointer" onclick="location.href='reports/kortix-analysis.html'">
+                    <div class="flex flex-col md:flex-row gap-10">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="badge-deep">深度分析</span>
+                                <span class="text-xs text-stone-400 font-mono">2026.01.25</span>
+                            </div>
+                            <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 group-hover:text-orange-600 transition-colors leading-tight serif">Kortix：别被Demo晃了眼，这才是数字员工的真面目</h3>
+                            <p class="text-stone-500 leading-relaxed text-lg">2026年了，如果你还在为AI会写段冷笑话而高潮，那你可能适合去搞马戏团...</p>
+                        </div>
+                        <div class="w-full md:w-56 h-56 bg-stone-100 rounded-3xl flex items-center justify-center text-6xl border border-stone-200 shadow-sm">🤖</div>
+                    </div>
+                </article>
+            </section>
+
+            <section id="podcast" class="mb-20">
+                <h2 class="text-[11px] font-semibold text-stone-400 uppercase tracking-[0.35em] mb-8 flex items-center">
+                    <span class="w-12 h-px bg-stone-300 mr-4"></span> The Ninjin Clone Podcast
+                </h2>
+                <div class="rounded-[28px] border border-stone-200 bg-white shadow-lg p-8 md:p-10">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+                        <div>
+                            <p class="text-xs font-semibold tracking-[0.3em] uppercase text-stone-400 mb-3">Daily Briefing</p>
+                            <h3 id="podcast-title" class="text-2xl md:text-3xl font-bold serif mb-3">今日播客：AI 情报速递 · 15 分钟</h3>
+                            <p id="podcast-summary" class="text-stone-500 max-w-xl">基于今日情报自动生成播客内容，包含深度研判与 5-8 条快讯。</p>
+                        </div>
+                        <button id="podcast-play" class="rounded-full bg-stone-900 text-stone-50 px-6 py-2 text-xs font-semibold tracking-widest uppercase">播放</button>
+                    </div>
+                    <div id="podcast-meta" class="mt-6 text-xs text-stone-400 uppercase tracking-[0.3em]"></div>
+                    <audio id="podcast-audio" class="mt-6 w-full" controls></audio>
+                    <div class="mt-6 h-24 rounded-2xl bg-gradient-to-r from-stone-200 via-amber-200 to-stone-200 flex items-center justify-center text-stone-600 text-sm tracking-widest uppercase">Audio Waveform Placeholder</div>
+                </div>
+            </section>
+
+            <section id="verdicts" class="mb-20">
+                <h2 class="text-[11px] font-semibold text-stone-400 uppercase tracking-[0.35em] mb-8 flex items-center">
+                    <span class="w-12 h-px bg-stone-300 mr-4"></span> Survival Verdicts
+                </h2>
+                <div class="rounded-[28px] border border-stone-200 bg-white shadow-lg p-8">
+                    <div class="flex flex-wrap items-center gap-3 mb-6">
+                        <span class="badge-verdict">复盘追踪</span>
+                        <h3 class="text-xl font-bold">那些曾被吹上天的工具，现在怎么样了？</h3>
+                    </div>
+                    <p class="text-stone-500 mb-8 leading-relaxed">Sisyphus 正在持续追踪我们在 2025 年末关注的 50 个 Agent 框架。我们不关心谁融了资，我们只关心谁的代码库还在跳动。</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                </div>
+            </section>
+
+            <section id="archives" class="mb-20">
+                <h2 class="text-[11px] font-semibold text-stone-400 uppercase tracking-[0.35em] mb-8 flex items-center">
+                    <span class="w-12 h-px bg-stone-300 mr-4"></span> Archive Timeline
+                </h2>
+                <div class="flex gap-4 overflow-x-auto pb-4">
+                    <div class="flex-shrink-0 w-32 p-4 rounded-2xl bg-white border border-stone-200 text-center cursor-pointer hover:border-stone-400 transition">
+                        <div class="text-xs text-stone-400 font-bold mb-1">2026.01</div>
+                        <div class="font-black text-xl serif">25日</div>
+                    </div>
+                    <div class="flex-shrink-0 w-32 p-4 rounded-2xl bg-white border border-stone-200 text-center opacity-50">
+                        <div class="text-xs text-stone-400 font-bold mb-1">2026.01</div>
+                        <div class="font-black text-xl serif">24日</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="personal-blog" class="mb-20">
+                <h2 class="text-[11px] font-semibold text-stone-400 uppercase tracking-[0.35em] mb-8 flex items-center">
+                    <span class="w-12 h-px bg-stone-300 mr-4"></span> Ninjin Brain Blog
+                </h2>
+                <div class="rounded-[28px] border border-stone-200 bg-white shadow-lg p-8">
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+                        <h3 class="text-2xl font-bold serif italic">"让碎片化思考，在算法中呼吸。"</h3>
+                        <button class="text-stone-700 font-semibold text-sm hover:underline">管理素材庫 →</button>
+                    </div>
+                    <div class="space-y-4">
+                        <article class="p-6 bg-stone-50 rounded-2xl border border-stone-200 shadow-sm cursor-pointer hover:border-stone-400 transition" onclick="location.href='../ninjin-brain-blog/posts/idea_01.html'">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="text-[10px] font-bold text-stone-600 uppercase tracking-widest">Latest Insight</span>
+                                <span class="text-[10px] text-stone-400">2026.01.25</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2">我的 AI 独立站构想：从碎片到系统的跨越</h4>
+                            <p class="text-sm text-stone-500 leading-relaxed">如何把一个人的思考熵减，转化为整个公司的执行力？深度探讨“属于自己的 NotebookLM”架构...</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-32 pt-16 border-t border-stone-200 flex flex-col md:flex-row justify-between items-center gap-8 text-sm">
+            <div class="text-center md:text-left">
+                <div class="text-lg font-bold serif mb-2">AI 进化论</div>
+                <div class="text-stone-400 text-[10px] tracking-widest uppercase">Driven by Ninjin Super Company | Powered by Sisyphus Verdict Engine</div>
+            </div>
+            <div class="text-stone-400">Updated daily at 09:00</div>
+        </footer>
+    </div>
+</body>
+</html>

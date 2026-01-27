@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "date": "2026年1月26日",
+    "author": "Ninjin 数字化实验室"
+  },
+  "latest_news": [
+    {
+      "id": "autogpt-deep-dive-2026-01-26",
+      "tag": "深度分析",
+      "tag_class": "badge-deep",
+      "date": "2026.01.26",
+      "title": "AutoGPT：别再迷信Demo，护城河是执行可靠性",
+      "summary": "真正的分水岭不是模型能力，而是把工具链失效率压到1%以下。",
+      "icon": "🧠",
+      "link": "../ninjin-brain-blog/posts/autogpt_deep_dive_2026-01-26.html"
+    },
+    {
+      "id": "Significant-Gravitas/AutoGPT",
+      "tag": "深度分析",
+      "tag_class": "badge-deep",
+      "date": "2026.01.26",
+      "title": "AutoGPT",
+      "summary": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "icon": "🧠",
+      "link": "https://github.com/Significant-Gravitas/AutoGPT"
+    },
+    {
+      "id": "AUTOMATIC1111/stable-diffusion-webui",
+      "tag": "深度分析",
+      "tag_class": "badge-deep",
+      "date": "2025.12.18",
+      "title": "stable-diffusion-webui",
+      "summary": "Stable Diffusion web UI",
+      "icon": "🧠",
+      "link": "https://github.com/AUTOMATIC1111/stable-diffusion-webui"
+    },
+    {
+      "id": "langchain-ai/langchain",
+      "tag": "简报速览",
+      "tag_class": "badge-brief",
+      "date": "2026.01.26",
+      "title": "langchain",
+      "summary": "🦜🔗 The platform for reliable agents.",
+      "icon": "⚡",
+      "link": "https://github.com/langchain-ai/langchain"
+    },
+    {
+      "id": "open-webui/open-webui",
+      "tag": "简报速览",
+      "tag_class": "badge-brief",
+      "date": "2026.01.26",
+      "title": "open-webui",
+      "summary": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "icon": "⚡",
+      "link": "https://github.com/open-webui/open-webui"
+    },
+    {
+      "id": "Comfy-Org/ComfyUI",
+      "tag": "简报速览",
+      "tag_class": "badge-brief",
+      "date": "2026.01.26",
+      "title": "ComfyUI",
+      "summary": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
+      "icon": "⚡",
+      "link": "https://github.com/Comfy-Org/ComfyUI"
+    },
+    {
+      "id": "hn-46765120",
+      "tag": "简报速览",
+      "tag_class": "badge-brief",
+      "date": "2026.01.26",
+      "title": "Vibe Coding Kills Open Source",
+      "summary": "Discussion trending on Hacker News.",
+      "icon": "⚡",
+      "link": "https://arxiv.org/abs/2601.15494"
+    },
+    {
+      "id": "hn-46763864",
+      "tag": "简报速览",
+      "tag_class": "badge-brief",
+      "date": "2026.01.26",
+      "title": "MapLibre Tile: a modern and efficient vector tile format",
+      "summary": "Discussion trending on Hacker News.",
+      "icon": "⚡",
+      "link": "https://maplibre.org/news/2026-01-23-mlt-release/"
+    },
+    {
+      "id": "hn-46765460",
+      "tag": "简报速览",
+      "tag_class": "badge-brief",
+      "date": "2026.01.26",
+      "title": "After two years of vibecoding, I'm back to writing by hand",
+      "summary": "Discussion trending on Hacker News.",
+      "icon": "⚡",
+      "link": "https://atmoio.substack.com/p/after-two-years-of-vibecoding-im"
+    }
+  ],
+  "verdicts": [
+    {
+      "status": "up",
+      "name": "MCP Protocol",
+      "desc": "生态爆发，已成为行业事实标准。"
+    },
+    {
+      "status": "down",
+      "name": "SimpleWrapper-AI",
+      "desc": "GitHub 已 2 个月无更新，纯套壳逻辑已被市场淘汰。"
+    }
+  ],
+  "podcast": {
+    "title": "今日播客：AI 情报速递 · 15 分钟",
+    "summary": "深度解读 2 条，快讯 6 条。重点话题：AutoGPT · stable-diffusion-webui · langchain · open-webui · ComfyUI",
+    "meta": "Daily Briefing · 2 深度 / 6 快讯",
+    "audio": "../ninjin-brain-blog/podcast/generated/daily_briefing_2026-01-26.wav"
+  }
+}

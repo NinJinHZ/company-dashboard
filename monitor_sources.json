@@ -1,0 +1,31 @@
+{
+  "github": {
+    "query": "topic:ai language:python stars:>500",
+    "limit": 5
+  },
+  "hackernews": {
+    "limit": 6
+  },
+  "reddit": {
+    "feeds": [
+      "https://www.reddit.com/r/MachineLearning/hot.json?limit=6",
+      "https://www.reddit.com/r/LocalLLaMA/hot.json?limit=6"
+    ]
+  },
+  "rss": {
+    "feeds": [
+      "https://techcrunch.com/feed/",
+      "https://www.theverge.com/rss/index.xml",
+      "https://arstechnica.com/feed/",
+      "https://hnrss.org/frontpage"
+    ]
+  },
+  "x": {
+    "queries": ["MCP protocol", "agentic AI", "tool calling"],
+    "limit": 5
+  },
+  "xiaohongshu": {
+    "keywords": ["AI工具", "效率工具", "智能体"],
+    "limit": 5
+  }
+}
