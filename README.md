@@ -3,6 +3,8 @@
 ## 🚀 Mission
 The central nervous system of **Ninjin Super Company**. Visualizes AI intelligence, survival verdicts, and personal insights.
 
+Auto-deploy check: 2026-01-27
+
 ## 📚 Documentation
 - **[REQUIREMENTS.md](./REQUIREMENTS.md)**: Detailed feature specs and architecture.
 - **[Usage Guide](./docs/USAGE.md)**: How to run updates and manage content.
