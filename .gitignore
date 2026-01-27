@@ -1,3 +1,5 @@
 .DS_Store
 node_modules/
 daily_updates.log
+.vercel/
+.vercel
