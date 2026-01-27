@@ -1,0 +1,45 @@
+name: Daily dashboard refresh
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Refresh dashboard data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          XHS_API_ENDPOINT: ${{ secrets.XHS_API_ENDPOINT }}
+          XHS_API_TOKEN: ${{ secrets.XHS_API_TOKEN }}
+          PODCAST_AUDIO_URL: ${{ secrets.PODCAST_AUDIO_URL }}
+        run: node monitor_engine.js
+
+      - name: Commit and push updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json reports/daily-reports
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: refresh dashboard data"
+          git push
