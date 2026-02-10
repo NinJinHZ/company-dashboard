@@ -21,9 +21,9 @@
                             500: '#64748b'
                         },
                         paper: {
-                            50: '#fbfaf7',
-                            100: '#f6f3ee',
-                            200: '#ece7df'
+                            50: '#faf7f2',
+                            100: '#f4f1eb',
+                            200: '#e9e3d9'
                         },
                         accent: {
                             600: '#ea580c',
@@ -51,12 +51,13 @@
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
         :root{
-            --bg: #f6f3ee;
+            /* Jimi-inspired warm paper */
+            --bg: #f4f1eb;
             --text: #0f172a;
             --muted: #475569;
-            --border: #e7e1d9;
-            --card: rgba(255, 255, 255, 0.76);
-            --ring: rgba(15, 23, 42, 0.14);
+            --border: #e6e1d8;
+            --card: rgba(255, 255, 255, 0.66);
+            --ring: rgba(15, 23, 42, 0.16);
         }
 
         body {
@@ -66,6 +67,7 @@
             scroll-behavior: smooth;
             -webkit-font-smoothing: antialiased;
             text-rendering: optimizeLegibility;
+            letter-spacing: 0.005em;
         }
         h1, h2, h3, .serif { font-family: 'Fraunces', serif; }
 
@@ -76,7 +78,7 @@
             transition: background 0.2s, transform 0.2s, border-color 0.2s;
         }
         @media (min-width: 768px) { .post-card { padding: 32px 0; } }
-        .post-card:hover { background-color: #fff7ed; border-color: #dfd6cb; }
+        .post-card:hover { background-color: rgba(255, 255, 255, 0.55); border-color: #d9d1c6; }
 
         .badge {
             font-size: 0.65rem;
@@ -104,10 +106,10 @@
 </head>
 <body class="min-h-screen">
 
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 py-8 sm:py-10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-12">
 
         <!-- Sticky nav (less "webpage", more "dashboard") -->
-        <nav class="sticky top-4 z-40 mb-12 rounded-full border border-stone-200/80 bg-white/70 backdrop-blur-xl shadow-soft px-4 sm:px-6 py-3">
+        <nav class="sticky top-4 z-40 mb-12 rounded-full border border-stone-200/70 bg-white/55 backdrop-blur-xl shadow-soft px-4 sm:px-6 py-3">
             <div class="flex flex-wrap items-center justify-between gap-4">
                 <div class="text-xl sm:text-2xl font-semibold serif tracking-tight">AI 进化论</div>
 
@@ -147,9 +149,9 @@
         </div>
 
         <header class="mb-16">
-            <div class="relative overflow-hidden rounded-[32px] border border-stone-200 glass-card shadow-soft2">
-                <div class="absolute -right-20 -top-28 h-64 w-64 rounded-full bg-amber-200/60 blur-3xl"></div>
-                <div class="absolute -left-24 -bottom-32 h-72 w-72 rounded-full bg-emerald-200/40 blur-3xl"></div>
+            <div class="relative overflow-hidden rounded-[32px] border border-stone-200/70 glass-card shadow-soft2">
+                <div class="absolute -right-24 -top-40 h-80 w-80 rounded-full bg-violet-200/25 blur-3xl"></div>
+                <div class="absolute -left-24 -bottom-40 h-80 w-80 rounded-full bg-amber-200/25 blur-3xl"></div>
                 <div class="relative px-8 py-12 md:px-12 md:py-16">
                     <p class="text-xs font-semibold tracking-[0.4em] uppercase text-stone-500 mb-4">Ninjin Intelligence Lab</p>
                     <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold serif mb-6">今日雷达 · AI 情报与生存研判</h1>
