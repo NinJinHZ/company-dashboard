@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Warm paper (jimi-inspired) */
+  --bg: #f4f1eb;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #e6e1d8;
+  --card: rgba(255, 255, 255, 0.66);
+  --ring: rgba(15, 23, 42, 0.16);
+}
+
+html {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.005em;
+}
+
+h1,
+h2,
+h3,
+.serif {
+  font-family: 'Fraunces', serif;
+}
+
+/* Links: calm, typography-first */
+a {
+  color: inherit;
+  text-decoration-color: rgba(15, 23, 42, 0.3);
+  text-decoration-color: color-mix(in srgb, var(--text) 30%, transparent);
+  text-decoration-thickness: from-font;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-color: rgba(15, 23, 42, 0.65);
+  text-decoration-color: color-mix(in srgb, var(--text) 65%, transparent);
+}
+
+/* Better focus visibility */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+  border-radius: 14px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Tags (used on deepdive pages) */
+.tag {
+  background: rgba(15, 23, 42, 0.04);
+  background: color-mix(in srgb, var(--text) 4%, transparent);
+  color: rgba(15, 23, 42, 0.88);
+  color: color-mix(in srgb, var(--text) 88%, transparent);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+}
+
+/* Editorial list item (used on homepage) */
+.post-card {
+  border-bottom: 1px solid var(--border);
+  padding: 24px 0;
+  transition: background 0.2s, transform 0.2s, border-color 0.2s;
+}
+
+@media (min-width: 768px) {
+  .post-card {
+    padding: 32px 0;
+  }
+}
+
+.post-card:hover {
+  background-color: rgba(255, 255, 255, 0.55);
+  border-color: color-mix(in srgb, var(--border) 70%, var(--text));
+}
+
+/* Badges (used on homepage) */
+.badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  letter-spacing: 0.08em;
+}
+
+.badge-deep {
+  background: #ffedd5;
+  color: #c2410c;
+  border-color: #fed7aa;
+}
+
+.badge-brief {
+  background: #ecfdf3;
+  color: #15803d;
+  border-color: #bbf7d0;
+}
+
+.badge-verdict {
+  background: #fef3c7;
+  color: #b45309;
+  border-color: #fde68a;
+}
+
+.glass-card {
+  background: var(--card);
+  backdrop-filter: blur(16px);
+}
+
+/* Simple prose defaults (used on deepdive posts) */
+.prose p {
+  margin: 1rem 0;
+  line-height: 1.9;
+  color: color-mix(in srgb, var(--text) 78%, var(--bg));
+}
+
+.prose h2 {
+  margin-top: 2.4rem;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.prose ul {
+  margin: 0.75rem 0 0.75rem 1.25rem;
+  color: color-mix(in srgb, var(--text) 78%, var(--bg));
+}
+
+.prose li {
+  margin: 0.4rem 0;
+}
