@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build:deepdive": "node scripts/build_deepdive.js"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.25.3",
     "dotenv": "^17.2.3",

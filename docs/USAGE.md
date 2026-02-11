@@ -28,6 +28,17 @@ Add:
 npx serve .
 ```
 
+## Deepdive Build (Markdown → HTML)
+Deepdive 源文件放在 `deepdive/posts-md/`，运行脚本会生成：
+- `deepdive/posts/<slug>.html`
+- `deepdive/index.html`
+- （可选）更新首页的 “Deepdive 精选” 模块
+
+```bash
+npm install
+npm run build:deepdive
+```
+
 ## Data Flow
 1. `monitor_engine.js` fetches signals and writes `data.json`.
 2. `update_dashboard.js` renders the latest data in the browser.
