@@ -4,63 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hello Deepdive：一份栏目协议 · AI 进化论</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../../static/site.css" />
+  <meta name="description" content="你不缺观点，你缺的是"可以复制的产出方式"。这份协议用来让每次 deepdive 都能被复用、被分发、被搜索。" />
+  <link rel="stylesheet" href="/static/site.css" />
 </head>
 <body>
-  <div class="max-w-3xl mx-auto px-6 py-12">
-    <nav class="flex items-center justify-between text-sm text-slate-500">
-      <a href="/" class="serif text-slate-900 text-lg font-bold tracking-tight">AI 进化论</a>
-      <div class="flex items-center gap-6">
-        <a class="hover:text-slate-900" href="/deepdive/">文章</a>
-        <a class="hover:text-slate-900" href="/">仪表盘</a>
+  <div class="container">
+    <nav class="topnav">
+      <a href="/" class="brand">AI 进化论</a>
+      <div class="navlinks">
+        <a href="/deepdive/">文章</a>
+        <a href="/">仪表盘</a>
+        <a href="/docs/USAGE.md">关于</a>
       </div>
     </nav>
 
-    <header class="mt-14">
-      <div class="text-sm text-slate-500 font-mono">2026-01-25</div>
-      <h1 class="mt-3 text-4xl sm:text-5xl font-bold serif tracking-tight">Hello Deepdive：一份栏目协议</h1>
-      <p class="mt-5 text-lg text-slate-600 leading-relaxed">
-        你不缺观点，你缺的是“可以复制的产出方式”。下面这份协议，用来让每次 deepdive 都能被复用、被分发、被搜索。
-      </p>
+    <header class="pageheader">
+      <div class="meta">2026-01-25</div>
+      <h1 class="pagetitle serif">Hello Deepdive：一份栏目协议</h1>
+      <p class="pagesubtitle">你不缺观点，你缺的是"可以复制的产出方式"。这份协议用来让每次 deepdive 都能被复用、被分发、被搜索。</p>
+      <div class="tagrow"><span class="tag">写作</span><span class="tag">系统</span></div>
     </header>
-
-    <article class="prose mt-12">
+    <article class="prose">
       <h2>1) 每篇 Deepdive 的最小字段</h2>
-      <ul>
-        <li><b>title</b>：一句话让人知道这篇解决什么问题</li>
-        <li><b>date</b>：YYYY-MM-DD</li>
-        <li><b>summary</b>：80-120 字（列表页摘要 + SEO description）</li>
-        <li><b>tags</b>：3-6 个（少而准）</li>
-        <li><b>slug</b>：稳定链接（不要用中文标题直接当路径）</li>
-      </ul>
-
-      <h2>2) 正文结构（推荐模板）</h2>
-      <ul>
-        <li><b>Why now</b>：为什么现在写这篇</li>
-        <li><b>Core insight</b>：核心观点（1-3 条）</li>
-        <li><b>Evidence</b>：证据/案例/对比</li>
-        <li><b>Framework</b>：可迁移的判断框架</li>
-        <li><b>Action</b>：读者可以立刻做什么</li>
-      </ul>
-
-      <h2>3) 分发原则</h2>
-      <p>
-        深度内容的 ROI 不是“发完就算”，而是：一次写作 → 多渠道复用（独立站 / Dashboard / Notion / X）。
-        以后我们把 deepdive 先落盘到仓库，再让页面自动生成。
-      </p>
-
-      <h2>4) 下一步（待自动化）</h2>
-      <ul>
-        <li>把 deepdive 内容从 <code>deepdive/posts/*.md</code> 生成静态 HTML</li>
-        <li>用一份 <code>deepdive/posts.json</code> 驱动列表页</li>
-        <li>Dashboard 首页展示“最近 3 条 deepdive”</li>
-      </ul>
+<ul>
+<li><strong>title</strong>：一句话让人知道这篇解决什么问题</li>
+<li><strong>date</strong>：YYYY-MM-DD</li>
+<li><strong>summary</strong>：80-120 字（列表页摘要 + SEO description）</li>
+<li><strong>tags</strong>：3-6 个（少而准）</li>
+<li><strong>slug</strong>：稳定链接（不要用中文标题直接当路径）</li>
+</ul>
+<h2>2) 正文结构（推荐模板）</h2>
+<ul>
+<li><strong>Why now</strong>：为什么现在写这篇</li>
+<li><strong>Core insight</strong>：核心观点（1-3 条）</li>
+<li><strong>Evidence</strong>：证据/案例/对比</li>
+<li><strong>Framework</strong>：可迁移的判断框架</li>
+<li><strong>Action</strong>：读者可以立刻做什么</li>
+</ul>
+<h2>3) 分发原则</h2>
+<p>深度内容的 ROI 不是"发完就算"，而是：一次写作 → 多渠道复用（独立站 / Dashboard / Notion / X）。 以后我们把 deepdive 先落盘到仓库，再让页面自动生成。</p>
+<h2>4) 下一步（待自动化）</h2>
+<ul>
+<li>把 deepdive 内容从 <code>deepdive/posts-md/*.md</code> 生成静态 HTML</li>
+<li>用列表页自动聚合最近文章</li>
+<li>Dashboard 首页展示"最近 3 条 deepdive"</li>
+</ul>
     </article>
-
-    <footer class="mt-16 text-sm text-slate-500">
-      <a href="/deepdive/" class="hover:text-slate-900">← 返回文章列表</a>
+    <footer class="pagefooter">
+      <a href="/deepdive/">← 返回文章列表</a>
     </footer>
+
   </div>
 </body>
 </html>
