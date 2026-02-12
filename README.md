@@ -29,6 +29,13 @@ The dashboard is data-driven.
 - **Auto-Update**: Run `node daily_engine.js` to fetch and regenerate `data.json`.
 - **Manual**: Edit `data.json` directly.
 
+### 2.1 Update News (MVP)
+Generate the minimal public news feed JSON:
+```bash
+node news_engine.js
+```
+This writes `static/news.json`, which is rendered by `news.html`.
+
 ### 3. Run Locally
 Serve the static files:
 ```bash

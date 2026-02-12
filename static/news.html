@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NinjinOS News Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+        .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); }
+        .badge-s { background-color: #000; color: #fff; }
+        .badge-a { background-color: #e5e7eb; color: #111827; }
+        .badge-b { background-color: #f3f4f6; color: #6b7280; }
+    </style>
+</head>
+<body class="text-slate-900">
+
+    <!-- Nav -->
+    <nav class="sticky top-0 z-50 glass border-b border-slate-200 px-6 py-4 flex justify-between items-center">
+        <div class="font-bold text-xl tracking-tight">NinjinOS <span class="text-slate-400 font-normal">/ News</span></div>
+        <div class="text-sm text-slate-500" id="update-time">Loading...</div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        
+        <!-- Hero Section (Top S-tier item) -->
+        <section id="hero-section" class="mb-16 hidden">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                <div class="md:col-span-8">
+                    <div class="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-widest uppercase bg-blue-600 text-white rounded-sm">Cover Story</div>
+                    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 tracking-tight" id="hero-title"></h1>
+                    <p class="text-xl md:text-2xl text-slate-600 leading-relaxed mb-8 border-l-4 border-slate-900 pl-6" id="hero-why"></p>
+                    <a id="hero-link" href="#" target="_blank" class="inline-flex items-center text-lg font-semibold border-b-2 border-slate-900 hover:text-blue-600 hover:border-blue-600 transition-colors pb-1">
+                        Read Source →
+                    </a>
+                </div>
+                <div class="md:col-span-4 flex flex-col justify-end border-t md:border-t-0 md:border-l border-slate-200 pt-6 md:pt-0 md:pl-8">
+                    <div class="text-sm font-mono text-slate-400 mb-2">SOURCE</div>
+                    <div class="text-lg font-bold mb-6" id="hero-source"></div>
+                    <div class="text-sm font-mono text-slate-400 mb-2">SIGNAL</div>
+                    <div class="text-lg font-bold">S-Tier <span class="text-slate-400 font-normal">/ High Confidence</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feed Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-slate-200 pt-12">
+            
+            <!-- Col 1: High Signal (A) -->
+            <div class="col-span-1">
+                <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-8">Priority Signals</h3>
+                <div id="feed-a" class="space-y-8"></div>
+            </div>
+
+            <!-- Col 2: The Rest (B) -->
+            <div class="col-span-1 md:col-span-2">
+                <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-8">Latest Wire</h3>
+                <div id="feed-b" class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8"></div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+        async function loadNews() {
+            try {
+                const res = await fetch('./news.json');
+                const data = await res.json();
+                
+                document.getElementById('update-time').innerText = 'Updated: ' + new Date(data.updatedAt).toLocaleString();
+
+                const items = data.items;
+                if (!items || items.length === 0) return;
+
+                // 1. Hero (First S item, or first item)
+                const heroItem = items.find(i => i.signal === 'S') || items[0];
+                renderHero(heroItem);
+
+                // 2. Feed
+                const feedA = document.getElementById('feed-a');
+                const feedB = document.getElementById('feed-b');
+
+                items.forEach(item => {
+                    if (item === heroItem) return; // Skip hero
+
+                    if (item.signal === 'A' || item.signal === 'S') {
+                        feedA.innerHTML += createCardA(item);
+                    } else {
+                        feedB.innerHTML += createCardB(item);
+                    }
+                });
+
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        function renderHero(item) {
+            document.getElementById('hero-section').classList.remove('hidden');
+            document.getElementById('hero-title').innerText = item.title;
+            document.getElementById('hero-why').innerText = item.whyItMatters || item.contentSnippet.substring(0, 100) + '...';
+            document.getElementById('hero-source').innerText = item.sourceName;
+            document.getElementById('hero-link').href = item.link;
+        }
+
+        function createCardA(item) {
+            return `
+                <article class="group">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="px-2 py-0.5 text-xs font-bold badge-a rounded">${item.signal}</span>
+                        <span class="text-xs text-slate-400 font-mono">${item.sourceName}</span>
+                    </div>
+                    <h2 class="text-xl font-bold leading-tight mb-2 group-hover:text-blue-600 transition-colors">
+                        <a href="${item.link}" target="_blank">${item.title}</a>
+                    </h2>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-3">
+                        ${item.whyItMatters}
+                    </p>
+                    <div class="text-xs text-slate-400">${new Date(item.pubDate).toLocaleTimeString()}</div>
+                </article>
+            `;
+        }
+
+        function createCardB(item) {
+            return `
+                <article class="border-b border-slate-100 pb-4 mb-4 last:border-0">
+                    <h2 class="text-base font-semibold leading-snug mb-1 hover:text-blue-600 transition-colors">
+                        <a href="${item.link}" target="_blank">${item.title}</a>
+                    </h2>
+                    <div class="flex items-center gap-2 text-xs text-slate-400 font-mono">
+                        <span>${item.sourceName}</span>
+                        <span>•</span>
+                        <span>${new Date(item.pubDate).toLocaleTimeString()}</span>
+                    </div>
+                </article>
+            `;
+        }
+
+        loadNews();
+    </script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+{
+  "updatedAt": "2026-02-11T14:46:03.585Z",
+  "items": [
+    {
+      "title": "FAA 关闭得州 El Paso 周边空域 10 天，所有航班停飞",
+      "link": "https://apnews.com/article/faa-el-paso-texas-air-space-closed-1f774bdfd46f5986ff0e7003df709caa",
+      "pubDate": "2026-02-11T11:27:38.000Z",
+      "contentSnippet": "Article URL: https://apnews.com/article/faa-el-paso-texas-air-space-closed-1f774bdfd46f5986ff0e7003df709caa\nComments URL: https://news.ycombinator.com/item?id=46973647\nPoints: 301\n# Comments: 217",
+      "sourceName": "Hacker News",
+      "weight": "S",
+      "id": "https://news.ycombinator.com/item?id=46973647",
+      "signal": "S",
+      "whyItMatters": "重大信号：如此长时间的空域关闭极罕见，或暗示 SpaceX 星舰发射或其他国防级测试。"
+    },
+    {
+      "title": "Chrome 扩展正在窃取用户浏览数据",
+      "link": "https://qcontinuum.substack.com/p/spying-chrome-extensions-287-extensions-495",
+      "pubDate": "2026-02-11T10:00:56.000Z",
+      "contentSnippet": "Article URL: https://qcontinuum.substack.com/p/spying-chrome-extensions-287-extensions-495\nComments URL: https://news.ycombinator.com/item?id=46973083\nPoints: 280\n# Comments: 101",
+      "sourceName": "Hacker News",
+      "weight": "S",
+      "id": "https://news.ycombinator.com/item?id=46973083",
+      "signal": "S",
+      "whyItMatters": "安全警示：大量扩展被发现含恶意代码，影响隐私与数据安全。"
+    },
+    {
+      "title": "Windows 记事本应用曝出远程代码执行漏洞",
+      "link": "https://www.cve.org/CVERecord?id=CVE-2026-20841",
+      "pubDate": "2026-02-11T06:15:33.000Z",
+      "contentSnippet": "Article URL: https://www.cve.org/CVERecord?id=CVE-2026-20841\nComments URL: https://news.ycombinator.com/item?id=46971516\nPoints: 486\n# Comments: 289",
+      "sourceName": "Hacker News",
+      "weight": "S",
+      "id": "https://news.ycombinator.com/item?id=46971516",
+      "signal": "S",
+      "whyItMatters": "高危漏洞：连最基础的系统组件也成攻击面，建议立即更新。"
+    },
+    {
+      "title": "OpenAI 政策高管因反对“成人模式”被曝遭解雇",
+      "link": "https://techcrunch.com/2026/02/10/openai-policy-exec-who-opposed-chatbots-adult-mode-reportedly-fired-on-discrimination-claim/",
+      "pubDate": "2026-02-11T02:15:27.000Z",
+      "contentSnippet": "The executive has denied the allegation that she engaged in discrimination.",
+      "sourceName": "TechCrunch",
+      "weight": "B",
+      "id": "https://techcrunch.com/?p=3091795",
+      "signal": "S",
+      "whyItMatters": "内部冲突：OpenAI 商业化激进策略与安全/伦理派系的又一次碰撞。"
+    },
+    {
+      "title": "Fun With Pinball：探索弹球机的机械原理",
+      "link": "https://www.funwithpinball.com/exhibits/small-boards",
+      "pubDate": "2026-02-11T00:21:55.000Z",
+      "contentSnippet": "Article URL: https://www.funwithpinball.com/exhibits/small-boards\nComments URL: https://news.ycombinator.com/item?id=46969088\nPoints: 123\n# Comments: 9",
+      "sourceName": "Hacker News",
+      "weight": "S",
+      "id": "https://news.ycombinator.com/item?id=46969088",
+      "signal": "S",
+      "whyItMatters": "极客趣味：硬核解析机械结构，适合产品与工程设计灵感。"
+    },
+    {
+      "title": "Telnet 消亡之日：全球流量归零",
+      "link": "https://www.labs.greynoise.io/grimoire/2026-02-10-telnet-falls-silent/",
+      "pubDate": "2026-02-10T22:20:40.000Z",
+      "contentSnippet": "Article URL: https://www.labs.greynoise.io/grimoire/2026-02-10-telnet-falls-silent/\nComments URL: https://news.ycombinator.com/item?id=46967772\nPoints: 402\n# Comments: 289",
+      "sourceName": "Hacker News",
+      "weight": "S",
+      "id": "https://news.ycombinator.com/item?id=46967772",
+      "signal": "S",
+      "whyItMatters": "历史时刻：一个时代的结束，网络协议安全的最终胜利。"
+    },
+    {
+      "title": "奇点将在一个周二到来",
+      "link": "https://campedersen.com/singularity",
+      "pubDate": "2026-02-10T17:04:31.000Z",
+      "contentSnippet": "Article URL: https://campedersen.com/singularity\nComments URL: https://news.ycombinator.com/item?id=46962996\nPoints: 1215\n# Comments: 659",
+      "sourceName": "Hacker News",
+      "weight": "S",
+      "id": "https://news.ycombinator.com/item?id=46962996",
+      "signal": "S",
+      "whyItMatters": "深度思考：关于 AGI 爆发时刻的预测，在 HN 引发千楼热议。"
+    },
+    {
+      "title": "前 GitHub CEO 发布 AI Agent 开发者平台",
+      "link": "https://entire.io/blog/hello-entire-world/",
+      "pubDate": "2026-02-10T15:44:47.000Z",
+      "contentSnippet": "Article URL: https://entire.io/blog/hello-entire-world/\nComments URL: https://news.ycombinator.com/item?id=46961345\nPoints: 552\n# Comments: 512",
+      "sourceName": "Hacker News",
+      "weight": "S",
+      "id": "https://news.ycombinator.com/item?id=46961345",
+      "signal": "S",
+      "whyItMatters": "重磅新品：Nat Friedman 入局 Agent 基础设施，定义下一个开发者范式。"
+    },
+    {
+      "title": "Vulkan 简化之路：逐个子系统重构",
+      "link": "https://www.khronos.org/blog/simplifying-vulkan-one-subsystem-at-a-time",
+      "pubDate": "2026-02-10T13:26:14.000Z",
+      "contentSnippet": "Article URL: https://www.khronos.org/blog/simplifying-vulkan-one-subsystem-at-a-time\nComments URL: https://news.ycombinator.com/item?id=46959418\nPoints: 265\n# Comments: 178",
+      "sourceName": "Hacker News",
+      "weight": "S",
+      "id": "https://news.ycombinator.com/item?id=46959418",
+      "signal": "S",
+      "whyItMatters": "底层技术：图形 API 的演进方向，对游戏引擎与高性能计算有影响。"
+    },
+    {
+      "title": "欧洲开始与 Visa 和 Mastercard 的 24 万亿分手",
+      "link": "https://europeanbusinessmagazine.com/business/europes-24-trillion-breakup-with-visa-and-mastercard-has-begun/",
+      "pubDate": "2026-02-10T11:42:14.000Z",
+      "contentSnippet": "Article URL: https://europeanbusinessmagazine.com/business/europes-24-trillion-breakup-with-visa-and-mastercard-has-begun/\nComments URL: https://news.ycombinator.com/item?id=46958399\nPoints: 1032\n# Comments: 868",
+      "sourceName": "Hacker News",
+      "weight": "S",
+      "id": "https://news.ycombinator.com/item?id=46958399",
+      "signal": "S",
+      "whyItMatters": "宏观变革：欧盟支付主权之争，可能重塑全球支付格局。"
+    },
+    {
+      "title": "费曼物理学讲义 (1961-1964) 在线版",
+      "link": "https://www.feynmanlectures.caltech.edu/",
+      "pubDate": "2026-02-10T11:36:14.000Z",
+      "contentSnippet": "Article URL: https://www.feynmanlectures.caltech.edu/\nComments URL: https://news.ycombinator.com/item?id=46958345\nPoints: 382\n# Comments: 101",
+      "sourceName": "Hacker News",
+      "weight": "S",
+      "id": "https://news.ycombinator.com/item?id=46958345",
+      "signal": "S",
+      "whyItMatters": "经典资源：物理学圣经免费开放，永不过时的认知资产。"
+    },
+    {
+      "title": "TikTok 在美国推出基于精准位置的“本地流”",
+      "link": "https://techcrunch.com/2026/02/11/tiktok-launches-an-opt-in-local-feed-in-the-u-s-leveraging-users-precise-location/",
+      "pubDate": "2026-02-11T14:40:55.000Z",
+      "contentSnippet": "TikTok's new Local Feed will show you nearby shopping, dining, events, news, and more.",
+      "sourceName": "TechCrunch",
+      "weight": "B",
+      "id": "https://techcrunch.com/?p=3091882",
+      "signal": "B",
+      "whyItMatters": "平台动态：TikTok 杀入本地生活，直接对标 Yelp/Google Maps。"
+    },
+    {
+      "title": "Integrate 融资 1700 万美元：革新国防项目管理",
+      "link": "https://techcrunch.com/2026/02/11/integrate-raises-17m-to-move-defense-project-management-into-the-21st-century/",
+      "pubDate": "2026-02-11T14:21:28.000Z",
+      "contentSnippet": "The round was led by FPV Ventures co-founder and managing partner Wesley Chan.",
+      "sourceName": "TechCrunch",
+      "weight": "B",
+      "id": "https://techcrunch.com/?p=3091872",
+      "signal": "B",
+      "whyItMatters": "行业融资：国防科技（Defense Tech）持续升温，垂直 SaaS 机会。"
+    },
+    {
+      "title": "Complyance 融资 2000 万美元：AI 原生合规管理",
+      "link": "https://techcrunch.com/2026/02/11/complyance-raises-20m-to-help-companies-manage-risk-and-compliance/",
+      "pubDate": "2026-02-11T14:00:00.000Z",
+      "contentSnippet": "Complyance raised a $20 million Series A led by GV for its AI-native compliance platform.",
+      "sourceName": "TechCrunch",
+      "weight": "B",
+      "id": "https://techcrunch.com/?p=3091539",
+      "signal": "B",
+      "whyItMatters": "AI 落地：合规/法务是 LLM 最好的落地场景之一。"
+    },
+    {
+      "title": "人形机器人公司 Apptronik 估值超 50 亿美元，融资近 10 亿",
+      "link": "https://techcrunch.com/2026/02/11/humanoid-robot-startup-apptronik-has-now-raised-935m-at-a-5b-valuation/",
+      "pubDate": "2026-02-11T14:00:00.000Z",
+      "contentSnippet": "Apptronik has sold another $520 million in a Series A extension to existing and new investors like Google and Mercedes-Benz.",
+      "sourceName": "TechCrunch",
+      "weight": "B",
+      "id": "https://techcrunch.com/?p=3091741",
+      "signal": "B",
+      "whyItMatters": "硬科技：具身智能资本狂欢，估值泡沫与落地预期的博弈。"
+    },
+    {
+      "title": "Meridian 融资 1700 万美元：重塑“Agentic 表格”",
+      "link": "https://techcrunch.com/2026/02/11/meridian-ai-raises-17-million-to-remake-the-agentic-spreadsheet/",
+      "pubDate": "2026-02-11T14:00:00.000Z",
+      "contentSnippet": "A new company called Meridian.AI has emerged from stealth with an IDE-based approach to agentic financial modeling.",
+      "sourceName": "TechCrunch",
+      "weight": "B",
+      "id": "https://techcrunch.com/?p=3091868",
+      "signal": "B",
+      "whyItMatters": "产品形态：Excel/Spreadsheet 是 Agent 改造的重点战场。"
+    },
+    {
+      "title": "三星将于 2 月 25 日举办 Galaxy S26 发布会",
+      "link": "https://techcrunch.com/2026/02/10/samsung-to-hold-its-galaxy-s26-event-on-february-25/",
+      "pubDate": "2026-02-11T07:06:44.000Z",
+      "contentSnippet": "Samsung is going to launch S26 lineup just before Mobile World Congress (MWC).",
+      "sourceName": "TechCrunch",
+      "weight": "B",
+      "id": "https://techcrunch.com/?p=3091848",
+      "signal": "B",
+      "whyItMatters": "消费电子：MWC 前夕的安卓旗舰对决。"
+    },
+    {
+      "title": "随着联合创始人离职和 IPO 临近，马斯克转而谈论登月",
+      "link": "https://techcrunch.com/2026/02/10/with-co-founders-leaving-and-an-ipo-looming-elon-musk-turns-talk-to-the-moon/",
+      "pubDate": "2026-02-11T05:23:26.000Z",
+      "contentSnippet": "According to The New York Times, which reports that it heard the meeting, Musk told employees that xAI needs a lunar manufacturing facility...",
+      "sourceName": "TechCrunch",
+      "weight": "B",
+      "id": "https://techcrunch.com/?p=3091847",
+      "signal": "B",
+      "whyItMatters": "马斯克时刻：在 xAI 动荡期抛出宏大愿景，典型的注意力转移操作。"
+    },
+    {
+      "title": "xAI 创始团队几乎走了一半",
+      "link": "https://techcrunch.com/2026/02/10/nearly-half-of-xais-founding-team-has-now-left-the-company/",
+      "pubDate": "2026-02-11T01:50:00.000Z",
+      "contentSnippet": "Whatever the cause of the departures, the cumulative impact is alarming...",
+      "sourceName": "TechCrunch",
+      "weight": "B",
+      "id": "https://techcrunch.com/?p=3091548",
+      "signal": "B",
+      "whyItMatters": "人才流动：顶尖 AI 实验室的人才流失加剧，竞争格局生变。"
+    },
+    {
+      "title": "亚马逊或推媒体内容交易平台，供 AI 公司训练",
+      "link": "https://techcrunch.com/2026/02/10/amazon-may-launch-a-marketplace-where-media-sites-can-sell-their-content-to-ai-companies/",
+      "pubDate": "2026-02-10T23:16:28.000Z",
+      "contentSnippet": "A new report claims the e-commerce giant is looking to create a pipeline of licensable content between media publishers and AI companies.",
+      "sourceName": "TechCrunch",
+      "weight": "B",
+      "id": "https://techcrunch.com/?p=3091683",
+      "signal": "B",
+      "whyItMatters": "数据经济：版权内容开始定价交易，数据清洗/交易平台成新赛道。"
+    }
+  ]
+}

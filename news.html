@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News · Ninjin Intelligence Lab</title>
+
+    <script>
+      tailwind = window.tailwind || {};
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: { 950: "#0b1220", 900: "#0f172a", 700: "#334155", 600: "#475569", 500: "#64748b" },
+              paper: { 50: "#faf7f2", 100: "#f4f1eb", 200: "#e9e3d9" },
+              accent: { 600: "#ea580c", 500: "#f97316", 200: "#fed7aa" },
+            },
+            boxShadow: {
+              soft: "0 10px 30px rgba(15, 23, 42, 0.10)",
+              soft2: "0 20px 60px rgba(15, 23, 42, 0.14)",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="static/site.css" />
+
+    <style>
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        border: 1px solid rgba(120, 113, 108, 0.25);
+        padding: 0.25rem 0.65rem;
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+      .chip-s { background: rgba(234, 88, 12, 0.08); border-color: rgba(234, 88, 12, 0.25); color: #9a3412; }
+      .chip-a { background: rgba(2, 132, 199, 0.06); border-color: rgba(2, 132, 199, 0.22); color: #075985; }
+      .chip-b { background: rgba(15, 23, 42, 0.04); border-color: rgba(15, 23, 42, 0.12); color: #334155; }
+    </style>
+  </head>
+
+  <body class="min-h-screen">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-12">
+      <nav class="sticky top-4 z-40 mb-10 rounded-full border border-stone-200/70 bg-white/55 backdrop-blur-xl shadow-soft px-4 sm:px-6 py-3">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div class="text-xl sm:text-2xl font-semibold serif tracking-tight">
+            <a href="index.html" class="hover:text-stone-900 transition-colors">AI 进化论</a>
+          </div>
+          <div class="flex flex-wrap items-center gap-4 text-xs font-semibold tracking-widest uppercase text-stone-500">
+            <a href="news.html" class="text-stone-900">News</a>
+            <a href="/deepdive/" class="hover:text-stone-900 transition-colors">文章</a>
+            <a href="archives/index.html" class="hover:text-stone-900 transition-colors">归档</a>
+          </div>
+          <a href="index.html#latest" class="rounded-full border border-stone-300 px-5 py-2 text-xs font-semibold tracking-widest uppercase text-stone-600 hover:border-stone-500 transition">Back</a>
+        </div>
+      </nav>
+
+      <header class="mb-10">
+        <div class="relative overflow-hidden rounded-[32px] border border-stone-200/70 glass-card shadow-soft2">
+          <div class="relative px-8 py-10 md:px-12 md:py-12">
+            <p class="text-xs font-semibold tracking-[0.4em] uppercase text-stone-500 mb-3">Public News</p>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold serif mb-4">Signals · A minimal, usable feed</h1>
+            <p class="text-sm sm:text-base text-stone-600 max-w-2xl">
+              1 hero item + sections, sourced from RSS, Hacker News, and Reddit. Stored as links + short summaries only.
+            </p>
+            <p id="last-updated" class="text-xs text-stone-400 mt-5">Loading…</p>
+          </div>
+        </div>
+      </header>
+
+      <main class="space-y-12">
+        <section id="hero" class="hidden">
+          <h2 class="text-[11px] font-semibold text-stone-400 uppercase tracking-[0.35em] mb-6 flex items-center">
+            <span class="w-12 h-px bg-stone-300 mr-4"></span> Hero
+          </h2>
+          <div id="hero-card" class="post-card"></div>
+        </section>
+
+        <section>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="rounded-[28px] border border-stone-200/70 bg-white shadow-soft p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-sm font-semibold tracking-widest uppercase text-stone-600">High Signal</h3>
+                <span class="chip chip-s">S</span>
+              </div>
+              <ul id="list-s" class="space-y-4"></ul>
+            </div>
+
+            <div class="rounded-[28px] border border-stone-200/70 bg-white shadow-soft p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-sm font-semibold tracking-widest uppercase text-stone-600">Fresh</h3>
+                <span class="chip chip-a">A</span>
+              </div>
+              <ul id="list-a" class="space-y-4"></ul>
+            </div>
+
+            <div class="rounded-[28px] border border-stone-200/70 bg-white shadow-soft p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-sm font-semibold tracking-widest uppercase text-stone-600">Background</h3>
+                <span class="chip chip-b">B</span>
+              </div>
+              <ul id="list-b" class="space-y-4"></ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-[11px] font-semibold text-stone-400 uppercase tracking-[0.35em] mb-6 flex items-center">
+            <span class="w-12 h-px bg-stone-300 mr-4"></span> Archive
+          </h2>
+          <div class="rounded-[28px] border border-stone-200/70 bg-white shadow-soft p-6">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+              <div class="text-sm font-semibold text-stone-700">All items</div>
+              <div class="text-xs text-stone-400">Refresh with: <code>node news_engine.js</code></div>
+            </div>
+            <ul id="archive" class="divide-y divide-stone-100"></ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const $ = (id) => document.getElementById(id);
+
+      function escapeHtml(str) {
+        return String(str || "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+
+      function formatDate(iso) {
+        try {
+          const d = new Date(iso);
+          if (Number.isNaN(d.getTime())) return "";
+          return d.toLocaleString(undefined, { year: "numeric", month: "short", day: "2-digit", hour: "2-digit", minute: "2-digit" });
+        } catch {
+          return "";
+        }
+      }
+
+      function chipClass(importance) {
+        if (importance === "S") return "chip chip-s";
+        if (importance === "A") return "chip chip-a";
+        return "chip chip-b";
+      }
+
+      function renderCompactItem(item) {
+        const title = escapeHtml(item.title);
+        const source = escapeHtml(item.source);
+        const publishedAt = escapeHtml(formatDate(item.publishedAt));
+        const why = escapeHtml(item.whyItMatters);
+        return `
+          <li>
+            <div class="flex items-start justify-between gap-3">
+              <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-stone-900 hover:underline leading-snug">${title}</a>
+              <span class="${chipClass(item.importance)}">${escapeHtml(item.importance)}</span>
+            </div>
+            <div class="text-[12px] text-stone-500 mt-1">${source} · ${publishedAt}</div>
+            <div class="text-[12px] text-stone-600 mt-2">${why}</div>
+          </li>
+        `;
+      }
+
+      function renderHero(item) {
+        const bullets = (item.summaryBullets || []).slice(0, 3).map((b) => `<li class="text-[13px] text-stone-600 leading-relaxed">${escapeHtml(b)}</li>`).join("");
+        $("hero-card").innerHTML = `
+          <div class="flex flex-col gap-5">
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="${chipClass(item.importance)}">${escapeHtml(item.importance)}</span>
+              <div class="text-xs font-semibold tracking-widest uppercase text-stone-500">${escapeHtml(item.source)}</div>
+              <div class="text-xs text-stone-400">${escapeHtml(formatDate(item.publishedAt))}</div>
+              <div class="text-xs text-stone-400">Score: ${escapeHtml(item.score)}</div>
+            </div>
+
+            <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="text-2xl sm:text-3xl font-bold serif text-stone-900 leading-tight hover:underline">
+              ${escapeHtml(item.title)}
+            </a>
+            <p class="text-sm sm:text-base text-stone-600 leading-relaxed">${escapeHtml(item.whyItMatters)}</p>
+            <ul class="list-disc pl-5 space-y-2">${bullets}</ul>
+            <div>
+              <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-full bg-stone-900 text-stone-50 px-6 py-2 text-xs font-semibold tracking-widest uppercase hover:bg-stone-700 transition">
+                Open Link
+              </a>
+            </div>
+          </div>
+        `;
+        $("hero").classList.remove("hidden");
+      }
+
+      function renderArchive(items) {
+        const html = items.map((item) => `
+          <li class="py-4">
+            <div class="flex items-center justify-between gap-3">
+              <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-stone-900 hover:underline leading-snug">
+                ${escapeHtml(item.title)}
+              </a>
+              <span class="${chipClass(item.importance)}">${escapeHtml(item.importance)}</span>
+            </div>
+            <div class="text-[12px] text-stone-500 mt-1">${escapeHtml(item.source)} · ${escapeHtml(formatDate(item.publishedAt))} · Score ${escapeHtml(item.score)}</div>
+          </li>
+        `).join("");
+        $("archive").innerHTML = html || `<li class="py-6 text-sm text-stone-500">No items yet. Run <code>node news_engine.js</code> to generate <code>static/news.json</code>.</li>`;
+      }
+
+      async function init() {
+        try {
+          const res = await fetch("static/news.json", { cache: "no-store" });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const items = await res.json();
+          if (!Array.isArray(items)) throw new Error("news.json is not an array");
+
+          const sorted = items.slice().sort((a, b) => (b.score || 0) - (a.score || 0));
+          const hero = sorted[0];
+          if (hero) renderHero(hero);
+
+          const rest = hero ? sorted.slice(1) : sorted;
+          const s = rest.filter((x) => x.importance === "S");
+          const a = rest.filter((x) => x.importance === "A");
+          const b = rest.filter((x) => x.importance === "B");
+
+          $("list-s").innerHTML = (s.length ? s : []).map(renderCompactItem).join("") || `<li class="text-sm text-stone-500">No S items yet.</li>`;
+          $("list-a").innerHTML = (a.length ? a : []).map(renderCompactItem).join("") || `<li class="text-sm text-stone-500">No A items yet.</li>`;
+          $("list-b").innerHTML = (b.length ? b : []).map(renderCompactItem).join("") || `<li class="text-sm text-stone-500">No B items yet.</li>`;
+
+          renderArchive(sorted);
+
+          const last = sorted[0]?.publishedAt ? formatDate(sorted[0].publishedAt) : "";
+          $("last-updated").textContent = last ? `Latest item: ${last}` : "Loaded.";
+        } catch (err) {
+          $("last-updated").textContent = `Failed to load news.json: ${err?.message || err}`;
+          $("archive").innerHTML = `<li class="py-6 text-sm text-stone-500">Run <code>node news_engine.js</code> to generate <code>static/news.json</code>.</li>`;
+        }
+      }
+
+      init();
+    </script>
+  </body>
+</html>
+
